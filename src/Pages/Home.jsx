@@ -40,7 +40,8 @@ import profile from "../assets/images/profile.png";
 import ecommerce from "../assets/images/bash.png";
 
 const Earth = (props) => {
-  const gltf = useGLTF("/mine.glb");
+  const gltf = useGLTF(`${import.meta.env.BASE_URL}assets/mine.glb`);
+
   const earthRef = useRef(null);
   useFrame((state, delta) => {
     earthRef.current.position.z = Math.sin(state.clock.elapsedTime) * 0.4;
@@ -67,10 +68,10 @@ const Home = () => {
 
     emailjs
       .sendForm(
-        "service_27p2csh", 
-        "template_udqsr9m", 
+        "service_27p2csh",
+        "template_udqsr9m",
         form.current,
-        "YSlLQrfEblf3b1uYt" 
+        "YSlLQrfEblf3b1uYt"
       )
       .then(() => {
         alert("Message sent successfully!");
@@ -90,10 +91,9 @@ const Home = () => {
         <Canvas className="canvas" camera={{ position: [0, 0, 5], fov: 50 }}>
           <Environment
             environmentIntensity={4}
-            files="/pretoria_gardens_2k.hdr"
+            files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/aerodynamics_workshop_1k.hdr"
+            ground={{ height: 10, radius: 40 }} 
           />
-
-          {/* Floating Earth Model */}
           <Float
             speed={4} // Speed of floating animation
             rotationIntensity={1.5} // Rotation animation
@@ -153,9 +153,7 @@ const Home = () => {
           <h1>
             Hello, I'm <span style={{ color: "lightblue" }}>Clerance</span>
           </h1>
-          <p>
-            Software and Mobile Fullstack developer based in South Africa
-          </p>
+          <p>Software and Mobile Fullstack developer based in South Africa</p>
         </div>
 
         <h2>Skills & About me</h2>
