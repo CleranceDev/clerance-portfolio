@@ -1,0 +1,53 @@
+@font-face {
+    font-family:roboto ;
+    src: url('../assets/fonts/Roboto-Light.ttf');
+}
+
+.navbar{
+
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 99;
+    overflow: hidden;
+    .nav-hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name-logo{
+            
+            p{
+                color: white;
+                font-family: sans-serif;
+                font-weight: bolder;
+                letter-spacing: 2px;
+
+            }
+        }
+        .nav-routes{
+           border: 2px solid #424242;
+           padding: 9px 5px;
+           border-radius: 12px ;
+           box-shadow: 4px 8px 8px rgba(255, 255, 255, 0.500) ;
+           .links{
+               font-family: roboto;
+                box-shadow: 4px 8px 8px rgba(153, 136, 136, 0.5) ;
+                margin: 0px 5px;
+                text-decoration: none;
+                color: white;
+                border: 2px solid #424242;
+                padding: 6px;
+                border-radius: 12px;
+                // font-size: 1rem;
+            }
+        }
+        .socials{
+            a{
+                img{
+                    margin: 0px 5px;
+                }
+            }
+        }
+    }
+}
