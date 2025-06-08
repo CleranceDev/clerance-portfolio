@@ -83,7 +83,7 @@ const Home = () => {
   };
 
   const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (val) => console.log(val));
+  useMotionValueEvent(scrollY, "change");
   const scale = useTransform(scrollY, [17, 550], [0.4, 1]);
   return (
     <div className="container">
@@ -91,8 +91,7 @@ const Home = () => {
         <Canvas className="canvas" camera={{ position: [0, 0, 5], fov: 50 }}>
           <Environment
             environmentIntensity={4}
-            files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/aerodynamics_workshop_1k.hdr"
-            ground={{ height: 10, radius: 40 }} 
+            files='/assets/pretoria_gardens_2k.hdr'
           />
           <Float
             speed={4} // Speed of floating animation
