@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clerance portfolio</title>
+    <meta name="description" content="Clearance's professional portfolio">
+    <title>Clearance Portfolio</title>
+    <!-- Preload important resources -->
+    <link rel="preload" href="/src/main.jsx" as="script">
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Fallback for non-JS users -->
+    <noscript>
+      <h1>JavaScript is required to view this portfolio</h1>
+    </noscript>
   </body>
 </html>
