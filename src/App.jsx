@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <Router basename="/clerance-portfolio">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>}/>

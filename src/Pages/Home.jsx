@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   useGLTF,
@@ -38,28 +38,24 @@ import linkedin from "../assets/social media/linkedin.svg";
 import githubtwo from "../assets/social media/github.svg";
 import profile from "../assets/images/profile.png";
 import ecommerce from "../assets/images/bash.png";
+const Earth = () => {
+  const gltf = useGLTF("/assets/mine.glb"); // ✅ Load from public
+  const earthRef = useRef();
 
-const Earth = (props) => {
-  const gltf = useGLTF(`${import.meta.env.BASE_URL}assets/mine.glb`);
-
-  const earthRef = useRef(null);
-  useFrame((state, delta) => {
-    earthRef.current.position.z = Math.sin(state.clock.elapsedTime) * 0.4;
-    earthRef.current.rotation.x = Math.cos(state.clock.elapsedTime) * 0.4;
-    earthRef.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.08;
+  useFrame((state) => {
+    if (earthRef.current) {
+      earthRef.current.position.z = Math.sin(state.clock.elapsedTime) * 0.4;
+      earthRef.current.rotation.x = Math.cos(state.clock.elapsedTime) * 0.4;
+      earthRef.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.08;
+    }
   });
 
   return (
     <mesh ref={earthRef}>
-      <primitive
-        object={gltf.scene}
-        scale={[0.3, 0.3, 0.3]}
-        position={[0, -4, -2]}
-      />
+      <primitive object={gltf.scene} scale={[0.3, 0.3, 0.3]} position={[0, -4, -2]} />
     </mesh>
   );
 };
-
 const Home = () => {
   const form = useRef();
 
@@ -91,7 +87,8 @@ const Home = () => {
         <Canvas className="canvas" camera={{ position: [0, 0, 5], fov: 50 }}>
           <Environment
             environmentIntensity={4}
-            files='/assets/pretoria_gardens_2k.hdr'
+            files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr"
+            
           />
           <Float
             speed={4} // Speed of floating animation
