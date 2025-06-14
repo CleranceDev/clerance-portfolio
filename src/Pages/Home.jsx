@@ -50,10 +50,10 @@ const Earth = () => {
     }
   });
   const {viewport} = useThree()
-//[0.3, 0.3, 0.3]
+
   return (
     <mesh ref={earthRef}>
-      <primitive object={gltf.scene} scale={viewport.width/3} position={[0, -4, -2]} />
+      <primitive object={gltf.scene} scale={[0.3, 0.3, 0.3]} position={[0, -4, -2]} />
     </mesh>
   );
 };
