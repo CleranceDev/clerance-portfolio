@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   useGLTF,
   Environment,
@@ -49,10 +49,11 @@ const Earth = () => {
       earthRef.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.08;
     }
   });
-
+  const {viewport} = useThree()
+//[0.3, 0.3, 0.3]
   return (
     <mesh ref={earthRef}>
-      <primitive object={gltf.scene} scale={[0.3, 0.3, 0.3]} position={[0, -4, -2]} />
+      <primitive object={gltf.scene} scale={viewport.width/3} position={[0, -4, -2]} />
     </mesh>
   );
 };
