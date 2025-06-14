@@ -5,6 +5,7 @@
     font-family: sans-serif;
   }
 }
+
 .container {
   padding: 0;
   width: 100%;
@@ -28,7 +29,7 @@
   }
   .canvas-wrapper {
     background-color: #faffff;
-    height: 100vh;
+    height: 100dvh;
 
     @media (max-width: 768px) {
       height: 100dvh;
@@ -218,7 +219,6 @@
     margin: 0 auto;
     padding: 2rem;
 
-    /* New heading style */
     h1 {
       font-size: 2rem;
       text-align: center;
@@ -264,17 +264,6 @@
         background: #f5f5f5;
         position: relative;
         overflow: hidden;
-
-        // &::after {
-
-        //   position: absolute;
-        //   top: 50%;
-        //   left: 50%;
-        //   transform: translate(-50%, -50%);
-        //   color: #ccc;
-        //   font-weight: bold;
-
-        // }
       }
 
       &__details {

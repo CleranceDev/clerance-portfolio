@@ -49,12 +49,18 @@ const Earth = () => {
       earthRef.current.rotation.z = Math.sin(state.clock.elapsedTime) * 0.08;
     }
   });
-  const {viewport} = useThree()
-
+  const {viewport} = useThree();
+  
   return (
-    <mesh ref={earthRef}>
-      <primitive object={gltf.scene} scale={[0.3, 0.3, 0.3]} position={[0, -4, -2]} />
-    </mesh>
+    <group scale={viewport.width/6}>
+      <mesh ref={earthRef}>
+        <primitive
+          object={gltf.scene}
+          scale={[0.3, 0.3, 0.3]}
+          position={[0, -4, -2]}
+        />
+      </mesh>
+    </group>
   );
 };
 const Home = () => {
@@ -89,7 +95,6 @@ const Home = () => {
           <Environment
             environmentIntensity={4}
             files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/venice_sunset_2k.hdr"
-            
           />
           <Float
             speed={4} // Speed of floating animation
