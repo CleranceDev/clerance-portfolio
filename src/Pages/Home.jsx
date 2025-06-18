@@ -300,10 +300,10 @@ const Home = () => {
               <span>Mysql</span>
             </div>
             <div className="project__links">
-              <a href="#" className="project__link">
+              <a href="https://github.com/CleranceDev/bashtotalsport" className="project__link">
                 Code
               </a>
-              <a href="#" className="project__link project__link--demo">
+              <a href="https://bashtotalsport.netlify.app/" className="project__link project__link--demo">
                 Live Demo
               </a>
             </div>
