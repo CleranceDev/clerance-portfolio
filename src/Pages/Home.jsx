@@ -161,7 +161,6 @@ const Home = () => {
         <h2>Skills & About me</h2>
         <div className="about-skills">
           <div className="about-me">
-            <img src={profile} alt="" />
             <h1>Clerance Paile</h1>
             <p>
               I'm a software developer based in South Africa with a passion for
@@ -300,10 +299,10 @@ const Home = () => {
               <span>Mysql</span>
             </div>
             <div className="project__links">
-              <a href="https://github.com/CleranceDev/bashtotalsport" className="project__link">
+              <a href="https://github.com/CleranceDev/bashtotalsport"  target="_blank" className="project__link">
                 Code
               </a>
-              <a href="https://bashtotalsport.netlify.app/" className="project__link project__link--demo">
+              <a href="https://bashtotalsport.netlify.app/"  target="_blank" className="project__link project__link--demo">
                 Live Demo
               </a>
             </div>
