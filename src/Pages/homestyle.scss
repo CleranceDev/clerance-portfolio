@@ -45,6 +45,8 @@
   }
 
   .my-skills {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08) ;
     background: #ffffff;
     height: 100vh;
     padding: 2rem;
@@ -247,7 +249,7 @@
       background: white;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       img {
         width: 100%;
