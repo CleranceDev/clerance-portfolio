@@ -151,12 +151,12 @@ const Home = () => {
         </Canvas>
       </div>
       <motion.div style={{ scale, transition: easeIn }} className="my-skills">
-        <div className="welcome">
+        {/* <div className="welcome">
           <h1>
             Hello, I'm <span style={{ color: "lightblue" }}>Clerance</span>
           </h1>
           <p>Software and Mobile Fullstack developer based in South Africa</p>
-        </div>
+        </div> */}
 
         <h2>Skills & About me</h2>
         <div className="about-skills">
